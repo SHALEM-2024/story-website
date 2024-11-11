@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Stories</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Full-width Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="story-listing.html">Explore Stories</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search stories..." class="search-bar">
+                <button class="search-button">
+                    <i class="fas fa-search search-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Listing Section -->
+    <div class="story-listing">
+        <h2>Explore All Stories</h2>
+
+        <!-- Filter and Sorting Options -->
+        <div class="filters">
+            <select name="category" id="category">
+                <option value="all">All Categories</option>
+                <option value="recent">Recent Stories</option>
+                <option value="popular">Popular Stories</option>
+            </select>
+
+            <select name="sort" id="sort">
+                <option value="latest">Sort by: Latest</option>
+                <option value="oldest">Sort by: Oldest</option>
+                <option value="likes">Sort by: Most Liked</option>
+            </select>
+        </div>
+
+        <!-- Story Grid (Vertical Alignment) -->
+        <div class="story-grid">
+            <div class="story-preview">
+                <h3>Story Title 1</h3>
+                <p class="description">A brief description of the story to give readers a preview.</p>
+                <div class="story-info">
+                    <span>Published: Jan 1, 2024</span>
+                    <span>Likes: 120</span>
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            <div class="story-preview">
+                <h3>Story Title 2</h3>
+                <p class="description">Another engaging description to draw readers into the story.</p>
+                <div class="story-info">
+                    <span>Published: Dec 28, 2023</span>
+                    <span>Likes: 85</span>
+                </div>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            <!-- Additional story previews go here -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-link">Previous</a>
+            <span class="page-number">1</span>
+            <a href="#" class="page-link">Next</a>
+        </div>
+    </div>
+</body>
+</html>
