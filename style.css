@@ -8,7 +8,7 @@
 
 /* Accent color */
 :root {
-    --accent-color: #3A86FF;
+    --accent-color: #3A86FF; /* soft blue */
 }
 
 /* Full-width Navigation */
@@ -41,7 +41,6 @@ nav {
     color: var(--accent-color);
 }
 
-/* Search Container */
 .search-container {
     display: flex;
     align-items: center;
@@ -69,8 +68,6 @@ nav {
     padding: 0;
     margin-left: 0.5em;
     cursor: pointer;
-    border: none;
-    background: none;
 }
 
 .search-icon {
@@ -78,7 +75,7 @@ nav {
 }
 
 /* Container Layout */
-.container {
+.container, .story-listing {
     display: flex;
     max-width: 1200px;
     margin: 2em auto;
@@ -88,7 +85,7 @@ nav {
 
 /* Featured Story */
 .featured-story {
-    flex: 0.75;
+    flex: 0.6;
     padding: 1em;
     background-color: #f0f4f8;
     border-radius: 8px;
@@ -96,26 +93,44 @@ nav {
     margin-bottom: 2em;
 }
 
-.featured-story h2 {
+.featured-story h2, .story-listing h2 {
     color: var(--accent-color);
     text-align: center;
-    margin-bottom: 0.5em;
+    margin: 1.5em 0;
 }
 
-/* Recent Stories */
-.recent-stories {
-    flex: 1;
+/* Filter and Sorting Options */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.filters select {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Recent Stories and Story Listing Page */
+.recent-stories, .story-grid {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    width: 100%;
 }
 
+/* Story Preview */
 .story-preview {
     padding: 1.5em;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 .story-preview h3 {
@@ -141,8 +156,10 @@ nav {
     text-decoration: none;
     font-weight: bold;
     margin-top: 1em;
+    align-self: flex-start;
 }
 
+/* View All Stories Button */
 .view-all-stories {
     text-align: center;
     margin: 3em auto 0 auto;
@@ -163,9 +180,38 @@ nav {
     background-color: #2d6ebf;
 }
 
+/* Pagination (Story Listing Page) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 0.5em;
+}
+
+.page-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.page-link:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.page-number {
+    font-weight: bold;
+    color: #333;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
+    .container, .story-listing {
         flex-direction: column;
         gap: 1.5em;
     }
@@ -192,3 +238,4 @@ nav {
         text-align: left;
     }
 }
+
