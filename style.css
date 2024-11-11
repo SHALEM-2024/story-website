@@ -68,6 +68,8 @@ nav {
     padding: 0;
     margin-left: 0.5em;
     cursor: pointer;
+    border: none; /* Remove any border */
+    background: none; /* Remove any background color */
 }
 
 .search-icon {
