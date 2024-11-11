@@ -102,6 +102,12 @@ nav {
     margin-bottom: 0.5em;
 }
 
+
+    /* Grey color for description text in both featured and recent stories */
+.featured-story p, .story-preview .description {
+    color: #555; /* Matching grey color */
+    line-height: 1.6;
+
 /* Recent Stories */
 .recent-stories {
     flex: 1;
