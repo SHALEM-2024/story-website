@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Accent color */
+/* Accent Color */
 :root {
     --accent-color: #3A86FF; /* soft blue */
 }
@@ -41,7 +41,6 @@ nav {
     color: var(--accent-color);
 }
 
-/* Search Bar Container */
 .search-container {
     display: flex;
     align-items: center;
@@ -59,22 +58,22 @@ nav {
     border-radius: 20px;
     width: 150px;
     transition: width 0.3s ease;
-    flex: 1;
 }
 
 .search-button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    background: none;
+    border: none;
     padding: 0;
     margin-left: 0.5em;
     cursor: pointer;
-    border: none; /* Remove any border */
-    background: none; /* Remove any background color */
 }
 
 .search-icon {
     color: #333;
+}
+
+.search-bar:focus {
+    width: 200px;
 }
 
 /* Page Header */
@@ -188,7 +187,6 @@ nav {
     .search-container {
         width: 100%;
         max-width: 300px;
-        justify-content: space-between;
     }
 
     .story-grid {
@@ -206,3 +204,4 @@ nav {
         text-align: left;
     }
 }
+
