@@ -57,20 +57,25 @@ nav {
     font-size: 0.9em;
     border-radius: 20px;
     width: 150px;
-    transition: width 0.3s ease;
+    /*transition: width 0.3s ease;*/
 }
 
 .search-button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-left: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;             /* Remove padding */
+    margin-left: 0.5em;     /* Space between input and button */
     cursor: pointer;
+    border: none;           /* Remove border */
+    background: none;       /* Remove background color */
 }
 
 .search-icon {
     color: #333;
+    font-size: 1em;         /* Adjust icon size if needed */
 }
+
 
 .search-bar:focus {
     width: 200px;
