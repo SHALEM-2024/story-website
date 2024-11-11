@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Accent Color */
+/* Accent color */
 :root {
     --accent-color: #3A86FF; /* soft blue */
 }
@@ -58,11 +58,13 @@ nav {
     border-radius: 20px;
     width: 150px;
     transition: width 0.3s ease;
+    flex: 1;
 }
 
 .search-button {
-    background: none;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     padding: 0;
     margin-left: 0.5em;
     cursor: pointer;
@@ -72,16 +74,29 @@ nav {
     color: #333;
 }
 
-.search-bar:focus {
-    width: 200px;
+/* Container Layout */
+.container, .story-listing {
+    display: flex;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+    gap: 3em;
 }
 
-/* Page Header */
-.story-listing h2 {
+/* Featured Story */
+.featured-story {
+    flex: 0.6;
+    padding: 1em;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.featured-story h2, .story-listing h2 {
     color: var(--accent-color);
     text-align: center;
     margin: 1.5em 0;
-    font-size: 2em;
 }
 
 /* Filter and Sorting Options */
@@ -90,7 +105,6 @@ nav {
     justify-content: center;
     gap: 1em;
     margin-bottom: 2em;
-    padding: 0 1em;
 }
 
 .filters select {
@@ -100,14 +114,12 @@ nav {
     font-size: 1em;
 }
 
-/* Story Grid */
-.story-grid {
+/* Recent Stories and Story Listing Page */
+.recent-stories, .story-grid {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
     gap: 2em;
-    padding: 0 1em;
+    width: 100%;
 }
 
 /* Story Preview */
@@ -147,7 +159,28 @@ nav {
     align-self: flex-start;
 }
 
-/* Pagination */
+/* View All Stories Button */
+.view-all-stories {
+    text-align: center;
+    margin: 3em auto 0 auto;
+}
+
+.view-all-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+    background-color: #2d6ebf;
+}
+
+/* Pagination (Story Listing Page) */
 .pagination {
     display: flex;
     justify-content: center;
@@ -178,6 +211,11 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container, .story-listing {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
     .nav-container {
         flex-direction: column;
         font-size: 0.9em;
@@ -187,11 +225,7 @@ nav {
     .search-container {
         width: 100%;
         max-width: 300px;
-    }
-
-    .story-grid {
-        flex-direction: column;
-        gap: 1.5em;
+        justify-content: space-between;
     }
 
     .story-preview {
