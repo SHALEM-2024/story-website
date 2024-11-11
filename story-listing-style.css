@@ -211,3 +211,34 @@ nav {
 }
 
 
+/* Mobile adjustments for the search bar */
+@media (max-width: 768px) {
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensure elements are spaced within the container */
+        padding-right: 0.5em; /* Add some padding to the right side */
+    }
+
+    .search-bar {
+        flex: 1; /* Let the input expand to fill available space */
+    }
+
+    .search-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Push icon to the right */
+        padding: 0; /* Remove extra padding */
+        margin-left: 0.5em; /* Add space between input and button */
+        cursor: pointer;
+    }
+
+    .search-icon {
+        color: #333;
+        margin: 0; /* Remove any margin to align it closely */
+    }
+}
+
+
