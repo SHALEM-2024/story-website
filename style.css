@@ -85,7 +85,7 @@ nav {
 
 /* Featured Story */
 .featured-story {
-    flex: 0.6;
+    flex: 0.75;
     padding: 1em;
     background-color: #f0f4f8;
     border-radius: 8px;
