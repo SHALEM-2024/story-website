@@ -238,4 +238,13 @@ nav {
         text-align: left;
     }
 }
+/* Add this at the end of your CSS file */
+
+/* Adjust Featured Story width on desktop */
+@media (min-width: 769px) {
+    .featured-story {
+        max-width: 800px; /* Adjust this value as needed */
+        margin: 0 auto;
+    }
+}
 
